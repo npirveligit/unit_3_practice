@@ -1,6 +1,7 @@
 import Timeouts from '../constants/Timeouts.js';
 import BaseElement from '../elements/BaseElement.js';
 import Logger from '../utils/Logger.js';
+import Browser from '../browser/Browser.js';
 
 export default class BasePage {
   constructor(uniqueElement, name) {
@@ -36,5 +37,11 @@ export default class BasePage {
     Logger.info(`Page "${this.name}" is opened - "${isOpened}"`);
     return isOpened;
   }
-
+   /**
+   * Open the page
+   * @param {string} url - The partial or full URL to open
+   */
+  async open(url) {
+    await Browser.openUrl(url);
+  } 
 }

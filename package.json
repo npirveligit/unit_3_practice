@@ -1,6 +1,5 @@
 {
   "name": "a1qa-wdio-framework",
-  "type": "module",
   "scripts": {
     "chrome.mocha": "wdio run ./configs/chrome.mocha.conf.js"
   },
